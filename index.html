@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="styl.css" type="text/css" rel="stylesheet" />
+        <title>TODO</title>
+    </head>
+    <body>
+        <div class="title">
+            <p class="tit">TODO LIST</p>
+        </div>
+        <img src="virgil.jpg">
+        <hr>
+        
+        <div class="flex-container">
+            <div>
+                <h3>ENTER EVENT</h3>
+                <hr>
+                <input onclick="inp()" type="text" style="width:350px">
+                <hr>
+            </div>
+        
+            <div class="todo">
+                <h3>TO-DO LIST</h3>
+                <hr>
+                <input type="checkbox" id="c1" style="width:650px" onclick="op()">
+                <p id="t1"></p>
+                <hr>
+                <input type="checkbox" id="c2" style="width:650px" onclick="op()">
+                <p id="t2"></p>
+                <hr>
+                <input type="checkbox" id="c3" style="width:650px" onclick="op()">
+                <p id="t3"></p>
+                <hr>
+                <input type="checkbox" id="c4" style="width:650px" onclick="op()">
+                <p id="t4"></p>
+                <hr>
+                <input type="checkbox" id="c5" style="width:650px" onclick="op()">
+                <p id="t5"></p>
+                <hr>
+                <input type="checkbox" id="c6" style="width:650px" onclick="op()" >
+                <p id="t6"></p>
+                <hr>
+            </div>
+
+            <div>
+                <h3>EVENT LAST COMPLETED</h3>
+                <p id="e1"></p>
+                <hr>
+            </div>
+        </div>
+    </body>
+
+
+    <script>
+        var i=j=0;
+        function inp(){
+            var item=window.prompt("ENTER EVENT")
+            i++;
+            if(i==1){
+                document.getElementById("t1").innerHTML=item;
+                }
+            if(i==2){
+                document.getElementById("t2").innerHTML=item;
+                }
+            if(i==3){
+                document.getElementById("t3").innerHTML=item;
+                }
+            if(i==4){
+                document.getElementById("t4").innerHTML=item;
+                }
+            if(i==5){
+                document.getElementById("t5").innerHTML=item;
+                }
+            if(i==6){
+                document.getElementById("t6").innerHTML=item;
+                i=0;
+                }
+            }
+        function op(){
+            if(document.getElementById("c1").checked){
+                var complet=document.getElementById("t1").innerHTML;
+                document.getElementById("t1").innerHTML="";
+                document.getElementById("e1").innerHTML=complet;
+                                                     }
+            if(document.getElementById("c2").checked){
+                var complet=document.getElementById("t2").innerHTML;
+                document.getElementById("t2").innerHTML="";
+                document.getElementById("e1").innerHTML=complet;
+                                                     }
+            if(document.getElementById("c3").checked){
+                var complet=document.getElementById("t3").innerHTML;
+                document.getElementById("t3").innerHTML="";
+                document.getElementById("e1").innerHTML=complet;
+                                                     }
+            if(document.getElementById("c4").checked){
+                var complet=document.getElementById("t4").innerHTML;
+                document.getElementById("t4").innerHTML="";
+                document.getElementById("e1").innerHTML=complet;
+                                                     }
+            if(document.getElementById("c5").checked){
+                var complet=document.getElementById("t5").innerHTML;
+                document.getElementById("t5").innerHTML="";
+                document.getElementById("e1").innerHTML=complet;
+                                                     }
+            if(document.getElementById("c6").checked){
+                var complet=document.getElementById("t6").innerHTML;
+                document.getElementById("t6").innerHTML="";
+                document.getElementById("e1").innerHTML=complet;
+                                                     }
+                                    }
+            
+
+
+        
+        
+    </script>
+</html>
